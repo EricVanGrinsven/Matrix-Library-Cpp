@@ -1,0 +1,78 @@
+Eric Van Grinsven
+ericvangrinsven99@gmail.com
+(661)904-2716
+
+BrainCorp Take-home challenge: Matrix Multiplication and Transposition
+
+Thank you very much for your time in reviewing my submission.  I put a lot of work into this project, and I hope that it is 
+enough to move on through the interview process!  BrainCorp has been at the top of my list for the company I want to intern
+for for about a year now.I am fascinated by the products and robotics applications worked on at BrainCorp, and I really hope
+to be able to contribute this summer!
+How to run:
+I have created a makefile to take care of dependencies easily.  I have run this on linux.
+% make
+% ./main
+
+The main program will explain it's usage, and includes test cases, a demo, and a sandbox environment for the user to test 
+different inputs on the program.
+
+If the user would like to use the library separately, put
+#include "BrainMatrix.h"
+#include "MatrixMath.h" at the top of your file.
+If you choose not to use the provided main file, here are the functions you will need to properly use the libray:
+
+		
+		
+        class: BrainMatrix
+        Matrix object used to perform mathematical operations for BrainCorp
+        constructor 1 input: (int) m: size 1 for mxn matrix
+                             (int) n: size 2 for mxn matrix
+                             Initializes zero-filled matrix of size mxn
+        constructor 2 input: (vector<vector<double>>) matrix: input matrix
+                             Initialize matrix of User's choice
+			
+		function: getShape
+		Gives shape of matrix
+		return: (int,int) pair for rowxcol shape.
+
+		function:getMatrix
+		Gives matrix as a 2d vector
+		return: (vector<vector<double>>) matrix values
+
+		function: changeElement
+		Replaces the previous value at matrix[i][j] to num
+		input: (int) row: row you want to change
+			   (int) col: col you want to change
+	           (double) num: value you want to input into the location
+		return: None
+
+		
+		
+		
+		
+		Class: MatrixMath
+		
+		function: matmul
+		Perform math operation matrix multiplication between two vectors
+        input: (BrainMatrix) a: input mat 1
+               (BrainMatrix) b: input mat 2
+        constraints: matrices must be non-empty && a.shape.first == b.shape.second
+        return: (BrainMatrix) a*b matrix
+
+
+        function: transpose
+        Perform math operation transpose on a matrix
+        input: (vector<double>) a: input vector
+        constraints: a.matrix must be non-empty
+        return: (BrainMatrix) transposed matrix
+        
+
+
+Assumptions:
+There are a few checks for edge cases on the user, such as doing a matrix multiplication on two matrices where the sizes 
+do not correctly match up for proper matrix multiplication.  Overall, this was not my focus, as I expect the user to use
+proper inputs on my program.  An error will occur regardless, just based on the computations necessary, and so this was 
+not my primary concern.  I focused on correctness of my code and to make a proper user interface for the user.
+
+
+
